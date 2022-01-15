@@ -430,7 +430,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "umpbcas2";
-$sql = "SELECT * FROM jan_detectiondata ORDER BY Day ";
+$sql = "SELECT * FROM detectiondata WHERE Month IN ('JAN','FEB','MAR') ORDER BY Day ";
 $conn = mysqli_connect($servername,$username,$password,$dbname);
 $result = mysqli_query($conn, $sql);
 

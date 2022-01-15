@@ -102,13 +102,13 @@ html {
     <div class ="w3-green w3-hover-shadow w3-center">
     <h1> Cyber Attack Detection list 2021 </h1>
     <h3> Choose specific quarter to view Data</h3>
-<a href="http://localhost/umpbcas2/pages/q1_analytics.php"> <button class="button button1">Q1 2021</button> </a>
+<a href="http://localhost/umpbcas2/pages/analytics.php?quarter=1" > <button class="button button1">Q1 2021</button> </a>
 <br>
-<a href="http://localhost/umpbcas2/pages/q2_analytics.php"><button class="button button2">Q2 2021</button> </a>
+<a href="http://localhost/umpbcas2/pages/analytics.php?quarter=2"><button class="button button2">Q2 2021</button> </a>
 <br>
-<a href="http://localhost/umpbcas2/pages/q3_analytics.php"><button class="button button3">Q3 2021</button> </a>
+<a href="http://localhost/umpbcas2/pages/analytics.php?quarter=3"><button class="button button3">Q3 2021</button> </a>
 <br>
-<a href="http://localhost/umpbcas2/pages/q4_analytics.php"><button class="button button4">Q4 2021</button> </a>
+<a href="http://localhost/umpbcas2/pages/analytics.php?quarter=4"><button class="button button4">Q4 2021</button> </a>
 <br>
 <a href="http://localhost/umpbcas2/pages/homepage.php"><button class="button button5">Home</button> </a>
 </div>

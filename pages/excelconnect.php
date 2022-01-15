@@ -30,17 +30,17 @@ if(isset($_FILES['excelfile']['name'])) {
                             }
 
                            if($i==0){
-                               $query="CREATE table " .$excel->sheetName($sheet)." (" .rtrim($q,",").");";   
+                               $query="CREATE table detectiondata  (ID int(255) AUTO_INCREMENT PRIMARY KEY ," .rtrim($q,",").");";   
                    
                             
                            }
-                           elseif($i==29){
-                            $query="ALTER TABLE ".$excel->sheetName($sheet)." ADD CONSTRAINT ".$excel->sheetName($sheet)."_pk PRIMARY KEY (dataid) ; ";
+                        //    elseif($i==29){
+                        //     $query="ALTER TABLE ".$excel->sheetName($sheet)." ADD CONSTRAINT ".$excel->sheetName($sheet)."_pk PRIMARY KEY (dataid) ; ";
                            
-                        }
+                        // }
                            else {
                             
-                               $query="INSERT INTO " .$excel->sheetName($sheet)." values (".rtrim($q,",").");";
+                               $query="INSERT INTO " .$excel->sheetName($sheet)." values (0,".rtrim($q,",").");";
                                
                            }
                            echo $query;
