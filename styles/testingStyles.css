@@ -1,0 +1,77 @@
+    h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+  }
+  h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color:#27613b ;
+}
+h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: lightgrey;
+    
+}
+  p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+
+  * {
+    box-sizing: border-box;
+  }
+  .charts{
+    width: auto;
+  }
+  /* Create two unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 30px;
+    height: 300px; 
+   
+   
+  }
+  .button{
+      padding-top: 20px;
+  }
+  .left {
+    width: 58%;
+    
+  }
+  
+  .right {
+    width: 42%;
+    border-top: 1px solid #7b7878;
+  }
+  .lefty {
+    width: 30%;
+    background-color:#27613b;
+  }
+  .middy {
+    width: 40%;
+    background-color:#225534;
+    
+  }
+  .righty {
+    width: 29%;
+    background-color:#27613b;
+    
+  }
+  .secondlefty {
+    width: 49%;
+    background-color:#27613b;
+  }
+  .secondrighty {
+    width: 50%;
+    background-color:#245936;
+    
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
