@@ -33,5 +33,8 @@ $dbname = "umpbcas2";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
       
 $result = mysqli_query($conn, $sql);
-$response = mysqli_fetch_assoc($result);
+$response = array();
+while($row = mysqli_fetch_assoc($result)){
+    array_push($response, $row);
+}
 echo json_encode($response);

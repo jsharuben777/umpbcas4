@@ -304,7 +304,7 @@
       $password = "";
       $dbname = "umpbcas2";
       $getquarter  = $_GET['quarter'];
-      echo "<script> var quarter= $getquarter</script>"   ; 
+      echo "<script> var quarter= $getquarter</script>";
 
 
       if ($getquarter == 1) {
@@ -328,47 +328,46 @@
 
 
       <table class="table table-hover">
-
-        <tr>
-          <th scope="col">No.</th>
-          <th scope="col">Day</th>
-          <th scope="col">Month</th>
-          <th scope="col">Year</th>
-          <th scope="col">Cyber Attack Details</th>
-          <th scope="col">Time</th>
-          <th scope="col">Status</th>
-          <th scope="col">Threat Level</th>
-
-          <th scope="col">Operation</th>
-          <th scope="col"></th>
-          <th scope="col"></th>
-        </tr>
-
-        <?php
-        $number = 1;
-        while ($row = mysqli_fetch_assoc($result)) {
-
-        ?>
-
+        <thead>
           <tr>
-            <td><?php echo $number++; ?></td>
-            <td><?php echo $row['Day']; ?></td>
-            <td><?php echo $row['Month']; ?></td>
-            <td><?php echo $row['Year']; ?></td>
-            <td><?php echo $row['Cyber_Attack_Details']; ?></td>
-            <td><?php echo $row['Time']; ?></td>
-            <td><?php echo $row['Status']; ?></td>
-            <td><?php echo $row['Threat_Level']; ?></td>
+            <th scope="col">No.</th>
+            <th scope="col">Day</th>
+            <th scope="col">Month</th>
+            <th scope="col">Year</th>
+            <th scope="col">Cyber Attack Details</th>
+            <th scope="col">Time</th>
+            <th scope="col">Status</th>
+            <th scope="col">Threat Level</th>
 
-            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#moredetailsmodal">More Details</button> </td>
-            <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editmodal">EDIT</button> </td>
-            <td><a class="btn btn-danger" href="cyberattackdetection.php?delete=<?php echo $row['dataid']; ?>">DELETE</a></td>
-
+            <th scope="col">Operation</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
           </tr>
-        <?php
-        }
-        ?>
+        </thead>
+        <tbody id="table_data">
+          <?php
+          $number = 1;
+          while ($row = mysqli_fetch_assoc($result)) {
+          ?>
+            <tr>
+              <td><?php echo $number++; ?></td>
+              <td><?php echo $row['Day']; ?></td>
+              <td><?php echo $row['Month']; ?></td>
+              <td><?php echo $row['Year']; ?></td>
+              <td><?php echo $row['Cyber_Attack_Details']; ?></td>
+              <td><?php echo $row['Time']; ?></td>
+              <td><?php echo $row['Status']; ?></td>
+              <td><?php echo $row['Threat_Level']; ?></td>
+              
+              <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#moredetailsmodal">More Details</button> </td>
+              <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editmodal">EDIT</button> </td>
+              <td><button class="btn btn-danger" onclick="deleteData(<?php echo $row['ID']; ?>)">DELETE</button></td>
 
+            </tr>
+          <?php
+          }
+          ?>
+        </tbody>
         <!-- This is the Cyber Attack Table FEB -Q1 ------------------------------------------------------------------------------------------------------------------------------->
 
 
@@ -394,27 +393,55 @@
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-       <script>
-        
+      <script>
         // this is textbox
-         $('#search').on('keyup',function(){
-        //    alert('ok!')
-        $.ajax({
-          url:'search.php',
-          method:'get',
-          data:{
-            quarter: quarter,
-            searchkeyword: this.value
-          },
-          dataType:'', 
-          success: function(response){
-            
-          }
-
+        $('#search').on('keyup', function() {
+          //    alert('ok!')
+          $.ajax({
+            url: 'search.php',
+            method: 'get',
+            data: {
+              quarter: quarter,
+              searchkeyword: this.value
+            },
+            dataType: 'json',
+            success: function(response) {
+              $("#table_data").empty()
+              let number = 1
+              response.forEach(function(val){
+                $("#table_data").append(`<tr>
+                  <td>${number++}</td>
+                  <td>${val.Day}</td>
+                  <td>${val.Month}</td>
+                  <td>${val.Year}</td>
+                  <td>${val.Cyber_Attack_Details}</td>
+                  <td>${val.Time}</td>
+                  <td>${val.Status}</td>
+                  <td>${val.Threat_Level}</td>
+                  <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#moredetailsmodal">More Details</button> </td>
+                  <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editmodal">EDIT</button> </td>
+                  <td><button class="btn btn-danger" onclick="deleteData(${val.ID})">DELETE</button></td>
+                </tr>`)
+              })
+            }
+          })
         })
-         }) 
 
-        </script>
+        const deleteData = function(id){
+          $.ajax({
+            url: "delete.php",
+            method: "get",
+            data: {
+              id: id
+            },
+            dataType: "json",
+            success: function(res){
+            }
+          })
+          location.reload()
+        }
+
+      </script>
   </body>
 
 </html>
