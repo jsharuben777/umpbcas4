@@ -36,10 +36,10 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost/umpbcas2/pages/cyberattackanalytics.php">Cyber Attack Analytics</a>
+            <a class="nav-link" href="http://localhost/umpbcas2/pages/recommendations.php">Recommendations</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://localhost/umpbcas2/pages/notificationalert.php">Notification Alert</a>
+            <a class="nav-link" href="http://localhost/umpbcas2/pages/forecasting.php">Forecasting</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://127.0.0.1:8000/logoutpage">Logout</a>
@@ -57,26 +57,37 @@
 
 
     <div class="container">
-      <div class="col-md">
-        <div class="search card">
-          <form>
-            <div class="form-group">
-              <label for="search">
-                Search :
-              </label>
-              <input type="text" class="form-control" id="search" aria-describedby="emailHelp" placeholder="Enter email">
-            </div>
-          </form>
-        </div>
-        <div class="card">
-          <h2>Cyber Attack Cases List</h2>
+      <div class="row">
 
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Add new Case
-          </button>
+        <div class="col-md-6">
+
+          <div class="search card">
+            <form>
+              <div class="form-group">
+                <label for="search">
+                  Search :
+                </label>
+                <input type="text" class="form-control" id="search" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
+            </form>
+          </div>
         </div>
+        <div class="col-md-6">
+          <div class="card">
+
+            <h2>Cyber Attack Cases List</h2>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Add new Case
+            </button>
+          </div>
+        </div>
+
+        
+
       </div>
     </div>
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -325,6 +336,7 @@
       $conn = mysqli_connect($servername, $username, $password, $dbname);
       $result = mysqli_query($conn, $sql);
       ?>
+      <a class="btn btn-primary" href="http://localhost/umpbcas2/pages/cyberattackanalytics.php?quarter=<?php echo $getquarter ?>">View Analytics</a>
 
 
       <table class="table table-hover">
@@ -358,7 +370,7 @@
               <td><?php echo $row['Time']; ?></td>
               <td><?php echo $row['Status']; ?></td>
               <td><?php echo $row['Threat_Level']; ?></td>
-              
+
               <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#moredetailsmodal">More Details</button> </td>
               <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editmodal">EDIT</button> </td>
               <td><button class="btn btn-danger" onclick="deleteData(<?php echo $row['ID']; ?>)">DELETE</button></td>
@@ -408,7 +420,7 @@
             success: function(response) {
               $("#table_data").empty()
               let number = 1
-              response.forEach(function(val){
+              response.forEach(function(val) {
                 $("#table_data").append(`<tr>
                   <td>${number++}</td>
                   <td>${val.Day}</td>
@@ -427,7 +439,7 @@
           })
         })
 
-        const deleteData = function(id){
+        const deleteData = function(id) {
           $.ajax({
             url: "delete.php",
             method: "get",
@@ -435,12 +447,10 @@
               id: id
             },
             dataType: "json",
-            success: function(res){
-            }
+            success: function(res) {}
           })
           location.reload()
         }
-
       </script>
   </body>
 

@@ -22,4 +22,4 @@
 	}
 ?>
 
-<a href = "http://localhost/umpbcas2/pages/loginform.html"><button>Log in </button></a>
+<a href = "http://localhost/umpbcas2/pages/loginform.php"><button>Log in </button></a>

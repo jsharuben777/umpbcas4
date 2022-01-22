@@ -36,7 +36,7 @@
           </div>
 
     <!-- Login Form -->
-    <form action="loginconnect.php" method="post">
+    <form action="../pages/loginconnect.php" method="POST">
             <div class="form-group">
               <label for="email">Email</label>
               <input
