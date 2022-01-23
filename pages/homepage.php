@@ -41,6 +41,10 @@
         <li class="nav-item">
           <a class="nav-link " aria-current="page" href="http://localhost/umpbcas2/pages/selectdetection.php">Cyber Attack Detention Info</a>
         </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost/umpbcas2/pages/cyberattackanalytics.php">Cyber Attack Analytics</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="http://localhost/umpbcas2/pages/recommendations.php" >Recommendations</a>
         </li>
@@ -48,7 +52,10 @@
           <a class="nav-link" href="http://localhost/umpbcas2/pages/forecasting.php" >Forecasting</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost/umpbcas2/pages/loginform.php">Logout</a>
+          <a class="nav-link" href="http://localhost/umpbcas2/pages/notificationalert.php" >Notification Alert</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost/umpbcas2/pages/.loginform.html">Logout</a>
         </li>
       </ul>
     </div>
@@ -80,7 +87,7 @@
               <div class="bg-light">
               <div class="card-header">Cyber Attack Detection Info</div>
                <div class="card-body">
-                 <h4 class="card-title">Detection Data</h4>
+                 <h4 class="card-title">Info</h4>
                    <p class="card-text">Click to View Cyber Attack detection information</p>
                    <a href="http://localhost/umpbcas2/pages/selectdetection.php"><button type="button" class="btn btn-info">View Detection</button></a>
                    </div>
@@ -110,7 +117,7 @@
             <div class="card-body">
               <h4 class="card-title">Analytics</h4>
               <p class="card-text">Click to access Cyber Attack detection analytics</p>
-              <a href="http://localhost/umpbcas2/pages/selectdetection.php">
+              <a href="http://localhost/umpbcas2/pages/cyberattackanalytics.php">
               <button type="button" class="btn btn-success">View Analytics</button></a>
               </div>
              </div>

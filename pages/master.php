@@ -52,7 +52,9 @@
         <li class="nav-item">
           <a class="nav-link" href="http://localhost/umpbcas2/pages/forecasting.php" >Forecasting</a>
         </li>
-       
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost/umpbcas2/pages/testingpage.php" >Testing page</a>
+        </li>
       <div class="d-flex flex-row-reverse">
         <li class="nav-item">
           <a class="nav-link" href="http://localhost/umpbcas2/pages/loginform.php">Logout</a>

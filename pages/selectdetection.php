@@ -19,7 +19,7 @@
     top: 50%;
     left: 50%;
     margin-top: 40px ;
-    margin-left: 650px ;
+    margin-left: 880px ;
 
    
   
