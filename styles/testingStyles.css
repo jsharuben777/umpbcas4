@@ -9,7 +9,7 @@
 }
 h4 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: lightgrey;
+    color: rgb(255, 255, 255);
     
 }
   p {
@@ -33,7 +33,7 @@ h4 {
    
   }
   .button{
-      padding-top: 20px;
+      padding-top: 10px;
   }
   .left {
     width: 58%;
@@ -42,7 +42,7 @@ h4 {
   
   .right {
     width: 42%;
-    border-top: 1px solid #7b7878;
+    border-top: 10px solid #7b7878;
   }
   .lefty {
     width: 30%;

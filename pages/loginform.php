@@ -28,8 +28,8 @@
   <div class="wrapper fadeInDown">
        <div id="formContent">
                 <!-- Tabs Titles -->
-               <h1>Court Booking System</h1>   
-               <h5>Hi there ! Register now to book your Courts !</h5>
+                <h1>UMP Breach Cyber Attack System</h1>   
+    <h5>Hi there Admin ! Login now to acess the System !</h5>
                <!-- Icon -->
           <div class="fadeIn first">
                  <img src="../images/users.png" id="icon" alt="User Icon" />
@@ -61,12 +61,12 @@
     <!-- Remind Passowrd -->
     <div id="formFooter">
       <div class="row">
-           <div class="column">
-                 <a class="underlineHover" href="#">Forgot Password?</a>
-           </div>
-           <div class="column">
-                  <a class="underlineHover" href="#">Register Now </a>
-           </div>
+           
+                 
+          
+          
+                  <a class="underlineHover" href="http://localhost/umpbcas2/pages/register.php">I dont't have an account , Register Now </a>
+         
       </div>
     </div>
 </div>

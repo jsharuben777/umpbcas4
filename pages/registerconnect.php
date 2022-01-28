@@ -11,7 +11,7 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into register_user(firstName, lastName, email, password) values(?, ?, ?, ?)");
+		$stmt = $conn->prepare("insert into register_user(firstname, lastname, email, password) values(?, ?, ?, ?)");
 		$stmt->bind_param("ssss", $firstname, $lastname,$email, $password);
 		$execval = $stmt->execute();
 		echo $execval;
@@ -22,4 +22,4 @@
 	}
 ?>
 
-<a href = "http://localhost/umpbcas2/pages/loginform.html"><button>Log in </button></a>
+<a href = "http://localhost/umpbcas2/pages/loginform.php"><button>Log in </button></a>

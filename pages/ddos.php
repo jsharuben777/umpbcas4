@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>UMPBCAS</title>
     <h1>Denial of Service Attack</h1>
 <style>
 h1{  

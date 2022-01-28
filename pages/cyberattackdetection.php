@@ -65,18 +65,18 @@
     <div class="card">
   <h2>Cyber Attack Cases List</h2>
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalforadddetails">
          Add new Case
      </button>
   </div>
   </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="#modalforadddetails" tabindex="-1" role="dialog" aria-labelledby="#modalforadddetails" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New Cyber Attack Data</h5>
+        <h5 class="modal-title" id="#modalforadddetails">New Cyber Attack Data</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -87,14 +87,7 @@
 <form action="addcyberattackdetection.php" method="POST">
         
 <div class="form-group">
-            <label for="dataid">Data ID</label>
-            <input
-              type="integer"
-              class="form-control"
-              id="dataid"
-              name="dataid"
-            />
-          </div>
+           
           <div class="form-group">
             <label for="Day">Day</label>
             <input
@@ -171,17 +164,17 @@
             </div>
            
            </div>
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
-        
+    
       </div>
      
       </form>
 
 
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+        
      
     </div>
   </div>
@@ -193,7 +186,7 @@
 <!-- Button trigger modal -->
 
 <!-- MORE DETAILS Modal -->
-<div class="modal fade" id="moredetailsmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="moredetailsmodal" tabindex="-1" role="dialog" aria-labelledby="modalformoredetails" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -209,7 +202,7 @@
         
          
           <div class="form-group">
-            <label for="Day">Day</label>
+            <label for="Day">Dayz</label>
             <input
               type="text"
               class="form-control"
@@ -470,7 +463,7 @@ $result = mysqli_query($conn, $sql);
     <td><?php echo $row['Status']; ?></td>
     <td><?php echo $row['Threat_Level']; ?></td>
    
-    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#moredetailsmodal">More Details</button> </td>
+    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalformoredetails">More Details</button> </td>
     <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editmodal">EDIT</button> </td>
     <td><a class="btn btn-danger" href="cyberattackdetection.php?delete=<?php echo $row['dataid']; ?>">DELETE</a></td>
     

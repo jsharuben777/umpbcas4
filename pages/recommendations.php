@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>UMPBCAS</title>
 <style>
 .button {
     border: none;
   color: white;
-  padding: 30px 60px;
+  padding: 25px 60px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -19,7 +20,7 @@
     top: 50%;
     left: 50%;
     margin-top: 40px ;
-    margin-left: 880px ;
+    margin-left: 780px ;
 
    
   

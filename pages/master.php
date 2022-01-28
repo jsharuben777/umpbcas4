@@ -10,7 +10,7 @@
     <link rel="stylesheet"  href="style.css"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <title> Login Page</title>
+    <title>UMPBCAS</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
@@ -49,12 +49,7 @@
         <li class="nav-item">
           <a class="nav-link" href="http://localhost/umpbcas2/pages/recommendations.php" >Recommendations</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="http://localhost/umpbcas2/pages/forecasting.php" >Forecasting</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="http://localhost/umpbcas2/pages/testingpage.php" >Testing page</a>
-        </li>
+       
       <div class="d-flex flex-row-reverse">
         <li class="nav-item">
           <a class="nav-link" href="http://localhost/umpbcas2/pages/loginform.php">Logout</a>
